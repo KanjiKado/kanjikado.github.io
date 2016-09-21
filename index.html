@@ -18,8 +18,10 @@
 		
 		<script>
 		"use strict";
+            
+                //yes, we want to do this before the page loads
+                //$("html").css("background-image","none");
 		$(document).ready(function(){
-	
 			$(".nav_top").on("mouseenter", function(e){
 			$(this).find(".underline").stop(true, true);
 			var width = $(this).find(".underline").width();
@@ -28,9 +30,10 @@
 					width: '+=132%'
 				}, width*3);
 			});
+                //$("#background").css("z-index","100");
 		});
             $(window).on("load", function() {
-                //$("#home").css("display","none");
+                $("#background").css("z-index","-1");
             });
 		</script>
 		
@@ -103,6 +106,9 @@
 	</script>
 	</head>
 	<body id="home">
+    <canvas width="500px" height="500px"id="background">
+    <!-- if no load then set background image -->
+    </canvas>
 	<div id="page">
 	<header id="top">
 				<div id="corner">
