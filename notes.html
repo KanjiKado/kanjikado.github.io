@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+		Garrison Davis | Notes
+		</title>
+		
+		<meta charset="utf-8">
+		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+		<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<script>
+		"use strict";
+		$(document).ready(function(){
+	
+			$(".nav_top").on("mouseenter", function(e){
+			$(this).find(".underline").stop(true, true);
+			var width = $(this).find(".underline").width();
+				$(this).find(".underline").width(0);
+				$(this).find(".underline").animate({
+					width: '+=132%'
+				}, width*3);
+			});
+		});
+		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		"use strict";
+		$(document).ready(function() {
+			$("#notes_button").on("click", function(e){
+				$("#notes_section").fadeIn();
+				$("#citations_section").hide();
+				$("#beyond_section").hide();
+				
+				$("#beyond_button").removeClass("active");
+				$("#notes_button").addClass("active");
+				$("#citations_button").removeClass("active");
+			});
+			
+			
+			$("#citations_button").on("click", function(e){
+				$("#notes_section").hide();
+				$("#citations_section").fadeIn();
+				$("#beyond_section").hide();
+				
+				$("#beyond_button").removeClass("active");
+				$("#notes_button").removeClass("active");
+				$("#citations_button").addClass("active");
+			});
+			
+			$("#beyond_button").on("click", function(e){
+				$("#notes_section").hide();
+				$("#citations_section").hide();
+				$("#beyond_section").fadeIn();
+				
+				$("#beyond_button").addClass("active");
+				$("#notes_button").removeClass("active");
+				$("#citations_button").removeClass("active");
+			});
+			});
+		</script>
+	</head>
+	<body id="notes">
+	<div id="page">
+	<header id="top">
+		<div id="corner">
+		<a href="/"><img id="logo" class="float_left" src="images/logo.png" alt="My logo"/></a>
+		<div id="title" class="float_left">
+		<h1>Garrison Davis</h1>
+		<h2>Game Developer</h2>
+		<cite>I make games the right way.</cite>
+		</div>
+		</div>
+		<nav>
+		<span id="top_nav" class="float_right">
+			<a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
+			<a  id="nav_contact" class="nav_top" href="contact/">Contact<span class="underline"></span></a>
+			<span id="row2">
+			<a  id="nav_notes" class="nav_top" href="notes.html">Notes<span class="underline"></span></a>
+			<a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
+			</span>
+		</span>
+		<div id="lower" class="clear_right">
+			<div id="dropdown" class="float_right">
+			<span id="projects">Projects<span id="colon">:</span></span>
+				<a id="proj_15" class="project" href="http://gdavis.io/projects/15.shtml">15</a>
+				<a id="proj_republique" class="project" href="http://gdavis.io/projects/republique.shtml">Republique</a>
+				<a id="proj_dodgecube" class="project_mid" href="http://gdavis.io/projects/dodgecube.shtml">Dodgecube</a>
+				<a id="proj_lawnmower" class="project_furthest" href="http://gdavis.io/projects/rothsjpl.shtml">Jetpack Lawnm.</a>
+				<ul id="expander_top">
+				<li id="whoa"><img id="expander" src="images/arrowsprite.png" alt=">>">
+				<img  id="hidden_expander" src="images/arrowsprite_over.png" alt=">>"></li>
+				<li id="hidden_menu" >
+				<ul class="hidden">
+						<li><a id="proj_15_sub" href="http://gdavis.io/projects/15.shtml" class="project">15<span class="sideline"></span></a></li>
+						<li><a id="proj_republique_sub" href="http://gdavis.io/projects/republique.shtml" class="project">Republique<span class="sideline"></span></a></li>
+						<li><a id="proj_dodgecube_sub" href="http://gdavis.io/projects/dodgecube.shtml" class="project_mid">Dodgecube<span class="sideline"></span></a></li>
+						<li><a id="proj_lawnmower_sub" href="http://gdavis.io/projects/rothsjpl.shtml" class="project_furthest">Jetpack Lawnm.<span class="sideline"></span></a></li>
+						<li><a id="proj_galaxy_sub" href="http://gdavis.io/projects/scumbag_galaxy.shtml">Scumbag Galaxy<span class="sideline"></span></a></li>
+				</ul></li>
+			</ul>
+			</div>
+		</div>
+		</nav>
+		</header>
+		<div id="outer_main">
+		<div id="main">	
+		<div id="content">
+		
+		<section>
+		</br>
+		<p>My site is built on the following applications/libraries: </p>
+		<ul>
+		<li>jQuery : <a href="https://jquery.com/">attribution</a>
+		<li>SlidesJS : <a href="http://www.slidesjs.com/">attribution</a>
+		<li>Tectite FormMail : <a href="https://www.tectite.com/">attribution</a>
+		</ul>
+		<p>I would like to acknowledge that I am not the owner or creator of the following 
+		assets hosted on my site. </p>
+		<ul>
+		<li>Polygon background : <a href="http://e2ua.com/WDF-1857837.html">attribution</a>
+		<li>Multiplatform image : <a href="http://www.bdigital.com/assets/mainmenu/244/editor/multiplatform.jpg?0.7532312825990293">attribution</a>
+		<li>Teamwork image : <a href="http://bookboon.com/blog/wp-content/uploads/2013/12/teamwork-1024x682.jpg">attribution</a>
+		<li>Papers image : <a href="https://pixabay.com/static/uploads/photo/2014/12/17/21/29/paper-571937_960_720.jpg">attribution</a>
+		</ul>
+		<ul>
+		<li>.pdf is a registered trademark of Adobe Systems Incorporated
+		<li>Android, Google Play and the Google Play logo are trademarks of Google Inc.
+		<li>The Ludum Dare logo and Kongregate logos are copyright their respective copyright holders.
+		</ul>
+		</section>
+		
+		</div>
+		</div>
+		</div>
+		<footer class="center" id ="footer"><br /><hr />
+		<p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
+		<p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a><a id="twitter" href="https://twitter.com/kanjikado"><img class="social" src="https://twitter.com/favicon.ico" alt="twitter"></a></p>
+
+		</footer>
+		</div>
+	</body>
+</html>

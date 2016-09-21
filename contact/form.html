@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Garrison Davis | Contact</title>
+<meta charset="utf-8">
+        <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/header.css">
+        <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <script>
+        "use strict";
+        $(document).ready(function(){
+    
+            $(".nav_top").on("mouseenter", function(e){
+            $(this).find(".underline").stop(true, true);
+            var width = $(this).find(".underline").width();
+                $(this).find(".underline").width(0);
+                $(this).find(".underline").animate({
+                    width: '+=132%'
+                }, width*3);
+            });
+        });
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body id="contact">
+	<header id="top">
+        <div id="corner">
+        <a href="/"><img id="logo" class="float_left" src="../images/logo.png" alt="My logo"/></a>
+        <div id="title" class="float_left">
+        <h1>Garrison Davis</h1>
+        <h2>Game Developer</h2>
+        <cite>I make games the right way.</cite>
+        </div>
+        </div>
+        <nav>
+        <span id="top_nav" class="float_right">
+            <a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
+            <a  id="nav_contact" class="nav_top" href="../contact">Contact<span class="underline"></span></a>
+            <span id="row2">
+            <a  id="nav_notes" class="nav_top" href="../notes.html">Notes<span class="underline"></span></a>
+            <a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
+            </span>
+        </span>
+        <div id="lower" class="clear_right">
+            <div id="dropdown" class="float_right">
+            <span id="projects">Projects<span id="colon">:</span></span>
+                <a id="proj_15" class="project" href="http://gdavis.io/projects/15.shtml">15</a>
+                <a id="proj_republique" class="project" href="http://gdavis.io/projects/republique.shtml">Republique</a>
+                <a id="proj_dodgecube" class="project_mid" href="http://gdavis.io/projects/dodgecube.shtml">Dodgecube</a>
+                <a id="proj_lawnmower" class="project_furthest" href="http://gdavis.io/projects/rothsjpl.shtml">Jetpack Lawnm.</a>
+                <ul id="expander_top">
+                <li id="whoa"><img id="expander" src="../images/arrowsprite.png" alt=">>">
+                <img  id="hidden_expander" src="../images/arrowsprite_over.png" alt=">>"></li>
+                <li id="hidden_menu" >
+                <ul class="hidden">
+                        <li><a id="proj_15_sub" href="http://gdavis.io/projects/15.shtml" class="project">15<span class="sideline"></span></a></li>
+                        <li><a id="proj_republique_sub" href="http://gdavis.io/projects/republique.shtml" class="project">Republique<span class="sideline"></span></a></li>
+                        <li><a id="proj_dodgecube_sub" href="http://gdavis.io/projects/dodgecube.shtml" class="project_mid">Dodgecube<span class="sideline"></span></a></li>
+                        <li><a id="proj_lawnmower_sub" href="http://gdavis.io/projects/rothsjpl.shtml" class="project_furthest">Jetpack Lawnm.<span class="sideline"></span></a></li>
+                        <li><a id="proj_galaxy_sub" href="http://gdavis.io/projects/scumbag_galaxy.shtml">Scumbag Galaxy<span class="sideline"></span></a></li>
+                </ul></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+		</header>
+		<div id="outer_main">
+		<div id="main">	
+		<div id="content">
+<h3>Let's get in touch.</h3>
+<p>Thanks for visiting my site! I strive to reply to all messages within 1 business day.</p>
+
+    <!-- STEP 1: Put the full URL to formmail.php on your website in the 'action' value. -->
+<form method="post" action="https://gdavis.io/contact/formmail.php" name="SampleForm">
+    <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+
+    <!-- STEP 2: Put your email address in the 'recipients' value.
+                 Note that you also have to allow this email address in the
+                 $TARGET_EMAIL setting within formmail.php!
+    -->
+    <input type="hidden" name="recipients" value="gpd8586@rit.edu" />
+
+    <!-- STEP 3: Specify required fields in the 'required' value - or leave unchanged.
+            NOTE: DO NOT put your email address and name here.
+            "Your email address" and "Your name" are error messages for your users to see,
+            not placeholders for you to replace.
+    -->
+    <input type="hidden" name="required" value="EmailAddr:Your email address,FullName:Your name" />
+
+    <!-- ALL DONE! Visit our site for HOW TO guides and more complex features. -->
+
+    <!-- this derives (creates) "email" and "realname" special fields from the input fields -->
+    <input type="hidden" name="derive_fields" value="email=EmailAddr,realname=FullName" />
+
+    <!-- this excludes the "email" and "realname" special fields from the body of the email you receive -->
+    <input type="hidden" name="mail_options" value="Exclude=email;realname" />
+	
+	<br />
+    <table style="border: 0px; border-spacing: 15%; width:100%">
+    <tr>
+        <td>
+        <p>Your name:</p>
+        </td>
+        <td><input type="text" name="FullName" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <p>Your email address:</p>
+        </td>
+        <td><input type="text" name="EmailAddr" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <p>Nature of contact:</p>
+        </td>
+        <td>
+           <p><input type="radio" name="subject" value="Portfolio Contact: General" checked="checked" />General Inquiry</p>
+           <p><input type="radio" name="subject" value="Portfolio Contact: Feedback" />Site Feedback</p>
+		   <p><input type="radio" name="subject" value="ortfolio Contact: Employment" />Employment</p>
+		   <p><input type="radio" name="subject" value="Portfolio Contact: Other" />Other</p>
+        </td>
+    </tr>
+    <tr>
+        <td style="margin-bottom:auto;">
+        <p>Message:</p>
+        </td>
+        <td><textarea name="mesg" rows="6" cols="50" style="padding-left:10px"></textarea>
+        </td>
+    </tr>
+    <tr>
+	    <td style="text-align:right;"> </td>
+
+        <td><input type="submit" value="Submit" /><span style="font-size:60%;">Powered by Tectite <a href="http://www.tectite.com/" target="_blank">web form</a> processor (FormMail).</span></td>
+    </tr>
+    </table>
+</form>	
+
+		</div>
+		</div>
+
+        <footer class="center" id ="footer"><br /><hr />
+        <p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
+        <p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a><a id="twitter" href="https://twitter.com/kanjikado"><img class="social" src="https://twitter.com/favicon.ico" alt="twitter"></a></p>
+
+        </footer>
+		</div>
+</body>
+</html>
