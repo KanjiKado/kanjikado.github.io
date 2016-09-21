@@ -131,6 +131,10 @@ footer{
 .center{
 	margin:auto;
 }
+.tiny{
+	color:#888888;
+	font-size:.75em;
+}
 footer p{
 	text-align: center;
 }

@@ -29,6 +29,9 @@
 				}, width*3);
 			});
 		});
+            $(window).on("load", function() {
+                //$("#home").css("display","none");
+            });
 		</script>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -115,7 +118,6 @@
 			<a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
 			<a  id="nav_contact" class="nav_top" href="contact/">Contact<span class="underline"></span></a>
 			<span id="row2">
-			<a  id="nav_notes" class="nav_top" href="notes.html">Notes<span class="underline"></span></a>
 			<a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
 			</span>
 		</span>
@@ -193,8 +195,10 @@
 		</div>
 		<footer class="center" id ="footer"><br /><hr />
 		<p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
-		<p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a><a id="twitter" href="https://twitter.com/kanjikado"><img class="social" src="https://twitter.com/favicon.ico" alt="twitter"></a></p>
-
+		<p class="center">
+            <a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a>
+            </p>
+            <p class="center tiny">  <a class="tiny" href="notes.html">Attributions</a></p>
 		</footer>
 		</div>
 	</body>
