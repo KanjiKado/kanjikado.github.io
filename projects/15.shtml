@@ -15,23 +15,7 @@
 		
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		
-		<script>
-		"use strict";
-		$(document).ready(function(){
-	
-			$(".nav_top").on("mouseenter", function(e){
-			$(this).find(".underline").stop(true, true);
-			var width = $(this).find(".underline").width();
-				$(this).find(".underline").width(0);
-				$(this).find(".underline").animate({
-					width: '+=132%'
-				}, width*3);
-			});
-		});
-		</script>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="../js/init.js"></script>
 	</head>
 	<body id="fifteen">
         <div id="background">
@@ -112,7 +96,7 @@
         <footer class="center" id ="footer"><br /><hr />
         <p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
         <p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a></p>
-            <p class="center tiny"> <a class="tiny" href="notes.html">Attributions</a></p>
+            <p class="center tiny"> <a class="tiny" href="../notes.html">Attributions</a></p>
 
         </footer>
 		</div>

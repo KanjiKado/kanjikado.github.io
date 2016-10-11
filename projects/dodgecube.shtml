@@ -15,23 +15,8 @@
 		
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="../js/init.js"></script>
 		
-		<script>
-		"use strict";
-		$(document).ready(function(){
-	
-			$(".nav_top").on("mouseenter", function(e){
-			$(this).find(".underline").stop(true, true);
-			var width = $(this).find(".underline").width();
-				$(this).find(".underline").width(0);
-				$(this).find(".underline").animate({
-					width: '+=132%'
-				}, width*3);
-			});
-		});
-		</script>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		</head>
 	<body id="dodgecube">
 	<div id="page">
@@ -50,8 +35,7 @@
             <a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
             <a  id="nav_contact" class="nav_top" href="../contact">Contact<span class="underline"></span></a>
             <span id="row2">
-            <a  id="nav_notes" class="nav_top" href="../notes.html">Notes<span class="underline"></span></a>
-            <a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
+            <a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="../images/pdf.png" alt=".pdf"><span class="underline"></span></a>
             </span>
         </span>
         <div id="lower" class="clear_right">

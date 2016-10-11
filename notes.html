@@ -16,60 +16,15 @@
 		
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		
-		<script>
-		"use strict";
-		$(document).ready(function(){
-	
-			$(".nav_top").on("mouseenter", function(e){
-			$(this).find(".underline").stop(true, true);
-			var width = $(this).find(".underline").width();
-				$(this).find(".underline").width(0);
-				$(this).find(".underline").animate({
-					width: '+=132%'
-				}, width*3);
-			});
-		});
-		</script>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>
-		"use strict";
-		$(document).ready(function() {
-			$("#notes_button").on("click", function(e){
-				$("#notes_section").fadeIn();
-				$("#citations_section").hide();
-				$("#beyond_section").hide();
-				
-				$("#beyond_button").removeClass("active");
-				$("#notes_button").addClass("active");
-				$("#citations_button").removeClass("active");
-			});
-			
-			
-			$("#citations_button").on("click", function(e){
-				$("#notes_section").hide();
-				$("#citations_section").fadeIn();
-				$("#beyond_section").hide();
-				
-				$("#beyond_button").removeClass("active");
-				$("#notes_button").removeClass("active");
-				$("#citations_button").addClass("active");
-			});
-			
-			$("#beyond_button").on("click", function(e){
-				$("#notes_section").hide();
-				$("#citations_section").hide();
-				$("#beyond_section").fadeIn();
-				
-				$("#beyond_button").addClass("active");
-				$("#notes_button").removeClass("active");
-				$("#citations_button").removeClass("active");
-			});
-			});
-		</script>
+        <script src="js/init.js"></script>
 	</head>
 	<body id="notes">
+        <div id="background">
+            <div id="output">
+            </div>
+        </div>
+		<script src="js/fss.min.js"></script>
+		<script src="js/background.js"></script>
 	<div id="page">
 	<header id="top">
 		<div id="corner">
@@ -85,7 +40,6 @@
 			<a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
 			<a  id="nav_contact" class="nav_top" href="contact/">Contact<span class="underline"></span></a>
 			<span id="row2">
-			<a  id="nav_notes" class="nav_top" href="notes.html">Notes<span class="underline"></span></a>
 			<a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
 			</span>
 		</span>
@@ -123,11 +77,12 @@
 		<li>jQuery : <a href="https://jquery.com/">attribution</a>
 		<li>SlidesJS : <a href="http://www.slidesjs.com/">attribution</a>
 		<li>Tectite FormMail : <a href="https://www.tectite.com/">attribution</a>
+		<li>Flat Surface Shader : <a href="http://matthew.wagerfield.com/flat-surface-shader/">attribution</a>
 		</ul>
 		<p>I would like to acknowledge that I am not the owner or creator of the following 
 		assets hosted on my site. </p>
 		<ul>
-		<li>Polygon background : <a href="http://e2ua.com/WDF-1857837.html">attribution</a>
+		<li>Polygon background (canvas fallback) : <a href="http://e2ua.com/WDF-1857837.html">attribution</a>
 		<li>Multiplatform image : <a href="http://www.bdigital.com/assets/mainmenu/244/editor/multiplatform.jpg?0.7532312825990293">attribution</a>
 		<li>Teamwork image : <a href="http://bookboon.com/blog/wp-content/uploads/2013/12/teamwork-1024x682.jpg">attribution</a>
 		<li>Papers image : <a href="https://pixabay.com/static/uploads/photo/2014/12/17/21/29/paper-571937_960_720.jpg">attribution</a>
@@ -136,6 +91,7 @@
 		<li>.pdf is a registered trademark of Adobe Systems Incorporated
 		<li>Android, Google Play and the Google Play logo are trademarks of Google Inc.
 		<li>The Ludum Dare logo and Kongregate logos are copyright their respective copyright holders.
+        <li>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc., registered in the U.S. and other countries.
 		</ul>
 		</section>
 		
@@ -144,9 +100,12 @@
 		</div>
 		<footer class="center" id ="footer"><br /><hr />
 		<p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
-		<p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a><a id="twitter" href="https://twitter.com/kanjikado"><img class="social" src="https://twitter.com/favicon.ico" alt="twitter"></a></p>
-
+		<p class="center">
+            <a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a>
+            </p>
+            <p class="center tiny">  <a class="tiny" href="notes.html">Attributions</a></p>
 		</footer>
+		</div>
 		</div>
 	</body>
 </html>
