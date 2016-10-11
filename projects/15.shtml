@@ -34,6 +34,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 	<body id="fifteen">
+        <div id="background">
+            <div id="output">
+            </div>
+        </div>
+		<script src="../js/fss.min.js"></script>
+		<script src="../js/background.js"></script>
 	<div id="page">
 	<header id="top">
 
@@ -50,8 +56,7 @@
             <a id="nav_home" class="nav_top" href="/">Home<span class="underline"></span></a>
             <a  id="nav_contact" class="nav_top" href="../contact">Contact<span class="underline"></span></a>
             <span id="row2">
-            <a  id="nav_notes" class="nav_top" href="../notes.html">Notes<span class="underline"></span></a>
-            <a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="images/pdf.png" alt=".pdf"><span class="underline"></span></a>
+            <a id="nav_download" class="nav_top" href="http://gdavis.io/downloads/resume.pdf" >Download <img id="pdf" class="inline" src="../images/pdf.png" alt=".pdf"><span class="underline"></span></a>
             </span>
         </span>
         <div id="lower" class="clear_right">
@@ -84,12 +89,12 @@
 		<div id="content">
 		
 		<section>
-			<h3>15</h3>
-			<img class="float_left" src="../images/15.png" alt="A screenshot of the project."/>
+			<h3>15: Wall Slam</h3>
+			<img class="float_left" style="padding-right:10px" src="../images/15.png" alt="A screenshot of the project."/>
 
-			<p>"15" is an elegantly simple mobile game developed solo in 48 hours.
+			<p>"15: Wall Slam" is an elegantly simple mobile game developed solo in 48 hours as a Ludum Dare compo entry.
 			The goal was to create a bright, minimalistic game with an incredibly satisfying reactions
-			to player input. I have been continuing its development in my spare time and will be releasing the game on Android and iOS by the end of the year.</p>
+			to player input. I continued its development in my spare time over the course of the year and have made it available on both iOS and Android as of Fall 2016.</p>
 			</section>
 			<h3 class="clear_both">Personal Technical Accomplishments:</h3>
 			<ul id="bullets">
@@ -98,15 +103,16 @@
 			<li>Dynamically resizes playing area to support ALL aspect ratios.
 		</ul>
 		<br />
-		<p>Play online (+source):</p>
-		<a href="http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=57773"><img src="../images/ludum_dare.png" alt="Ludum Dare"/></a>
+		<a class="mk_img" href="https://play.google.com/store/apps/details?id=io.gdavis.fifteen"><img src="../images/en-play-badge.png" alt="Google Play"/></a>
+		<a class="mk_img" href="https://itunes.apple.com/us/app/15-wall-slam/id1146307233?ls=1&mt=8"><img style="width:204px; height:auto;" src="../images/app_store.svg" alt="App Store"/></a>
 		</div>
 		</div>
 		</div>
 		
         <footer class="center" id ="footer"><br /><hr />
         <p class="center">&copy;<!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Garrison Davis</p>
-        <p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a><a id="twitter" href="https://twitter.com/kanjikado"><img class="social" src="https://twitter.com/favicon.ico" alt="twitter"></a></p>
+        <p class="center"><a href="https://www.linkedin.com/in/garrison-davis-a1778587"><img class="social" src="https://www.linkedin.com/favicon.ico" alt="linkedin"></a></p>
+            <p class="center tiny"> <a class="tiny" href="notes.html">Attributions</a></p>
 
         </footer>
 		</div>

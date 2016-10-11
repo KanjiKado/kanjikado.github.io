@@ -15,23 +15,9 @@
 		
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		
+        <script src="js/init.js"></script>
 		<script>
 		"use strict";
-            
-                //yes, we want to do this before the page loads
-                //$("html").css("background-image","none");
-		$(document).ready(function(){
-			$(".nav_top").on("mouseenter", function(e){
-			$(this).find(".underline").stop(true, true);
-			var width = $(this).find(".underline").width();
-				$(this).find(".underline").width(0);
-				$(this).find(".underline").animate({
-					width: '+=132%'
-				}, width*3);
-			});
-                //$("#background").css("z-index","100");
-		});
             $(window).on("load", function() {
                 $("#background").css("z-index","-1");
             });
@@ -106,9 +92,6 @@
 	</script>
 	</head>
 	<body id="home">
-    <canvas width="500px" height="500px"id="background">
-    <!-- if no load then set background image -->
-    </canvas>
 	<div id="page">
 	<header id="top">
 				<div id="corner">
@@ -183,7 +166,7 @@
 		<div id="container">
 		<div class="container">
 		<h3 class="overlay" id="overlay">All platforms</h3>
-						<p id="lastUpdated">Last Updated: 7/30/16 @ 5:27PM</p>
+						<p id="lastUpdated">Last Updated: 10/10/16 @ 5:43PM</p>
 		</div>
         <div id="slides">
           <img src="images/multiplatform.jpg" alt="iOS, Android, PC/Mac, Playstation, and more">
@@ -207,5 +190,11 @@
             <p class="center tiny">  <a class="tiny" href="notes.html">Attributions</a></p>
 		</footer>
 		</div>
+        <div id="background">
+            <div id="output">
+            </div>
+        </div>
+		<script src="js/fss.min.js"></script>
+		<script src="js/background.js"></script>
 	</body>
 </html>
