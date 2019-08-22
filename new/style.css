@@ -1,0 +1,94 @@
+html
+{
+	/*background-image : url("http://gdavis.io/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	background-color : #FFFFFF;
+	background-size: cover;*/
+	color : #535353;
+    font-family: 'Rokkitt', serif;
+}
+body{
+    margin: 0;
+}
+
+h1{
+    clear: both;
+    font-family: 'Belgrano', serif;
+    display: block;
+    margin: .1em 0;
+}
+#likes
+{
+    display: table;
+    margin: auto;
+}
+#titlecard{
+    padding: 8px 0 0 8px;
+}
+nav
+{
+    margin-left: auto;
+    background: darkgray;
+    display: flex;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li{
+    height: 100%;
+    display: flex;
+    float: left;
+    background-color: darksalmon;
+    text-align: center;
+}
+
+nav ul li a{
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 0 1em;
+    width: 100px;
+}
+nav ul li:first-child{
+    background-color: aqua;
+}
+
+nav ul li:last-child{
+    background-color: darkseagreen;
+}
+
+@media only screen and (max-width: 480px)  {
+    nav ul li{
+        display:  inline;
+        float: right;
+        padding: 0;
+        height: inherit
+    }
+}
+#me{
+    float: left
+}
+.top{
+    background: darkgray;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.behind{
+    height: 100%;
+}
+
+.top header
+{
+    float:left;
+    width: 50%;
+}
+
+div{
+    clear: both;
+}
