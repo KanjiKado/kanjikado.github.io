@@ -10,7 +10,8 @@ html
     font-family: 'Rokkitt', serif;
 }
 body{
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 h1{
@@ -43,8 +44,16 @@ nav ul li{
     height: 100%;
     display: flex;
     float: left;
-    background-color: darksalmon;
     text-align: center;
+    position: relative;
+}
+
+nav ul li{
+    height: 100%;
+    display: flex;
+    float: left;
+    text-align: center;
+    position: relative;
 }
 
 nav ul li a{
@@ -54,12 +63,14 @@ nav ul li a{
     padding: 0 1em;
     width: 100px;
 }
-nav ul li:first-child{
+nav ul li:first-child .behind{
     background-color: aqua;
+    animation-delay: .7s;
 }
 
-nav ul li:last-child{
-    background-color: darkseagreen;
+nav ul li:last-child .behind{
+    background-color: darkseagreen !important;
+    animation-delay: 1.3s;
 }
 
 @media only screen and (max-width: 480px)  {
@@ -80,7 +91,16 @@ nav ul li:last-child{
 }
 
 .behind{
+    background: darksalmon;
     height: 100%;
+    width: 0%;
+    position: absolute;
+    animation-delay: 1s;
+    animation-duration: .3s;
+    animation-name: stretch;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    
 }
 
 .top header
@@ -91,4 +111,9 @@ nav ul li:last-child{
 
 div{
     clear: both;
+}
+
+@keyframes stretch{
+    from { width:0% }
+    to { width:100% }
 }
