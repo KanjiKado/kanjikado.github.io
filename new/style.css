@@ -33,6 +33,7 @@ nav
     margin-left: auto;
     background: darkgray;
     display: flex;
+    position: relative;
 }
 
 nav ul{
@@ -101,6 +102,12 @@ nav ul li:last-child .behind{
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     
+}
+
+#confetti
+{
+    position: absolute;
+    right: -60px;
 }
 
 .top header
