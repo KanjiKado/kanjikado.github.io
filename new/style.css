@@ -83,7 +83,7 @@ nav ul li:last-child .behind{
     }
 }
 #me{
-    float: left
+    float: left;
 }
 .top{
     background: darkgray;
