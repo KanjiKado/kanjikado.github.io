@@ -39,18 +39,10 @@ nav
 nav ul{
     list-style: none;
     margin: 0;
-}
-
-nav ul li{
-    height: 100%;
     display: flex;
-    float: left;
-    text-align: center;
-    position: relative;
 }
 
 nav ul li{
-    height: 100%;
     display: flex;
     float: left;
     text-align: center;
