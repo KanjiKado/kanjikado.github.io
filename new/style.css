@@ -23,7 +23,7 @@ h1{
 #likes
 {
     display: table;
-    margin: 8px auto;
+    margin: 1.5em auto;
 }
 #titlecard{
     padding: 12px;
@@ -67,7 +67,7 @@ nav ul li:first-child .behind{
 }
 
 nav ul li:last-child .behind{
-    background-color: darkseagreen !important;
+    background-color: darkseagreen;
     animation-delay: 1.3s;
 }
 
@@ -76,11 +76,11 @@ nav ul li:last-child .behind{
     min-width: 200px;
     max-width: 50%;
     clear: none;
+    margin-right: 50px;
 }
 .top{
     background: darkgray;
     display: flex;
-    margin-bottom: 1em;
 }
 
 .behind{
@@ -96,8 +96,12 @@ nav ul li:last-child .behind{
     
 }
 
-.blurb{
-    clear: none;
+.blurb {
+    font-size: 1.5em;
+    display: flex;
+    margin: 0 50px;
+    padding: 25px;
+    background-color: darkgray;
 }
 
 #confetti
@@ -106,9 +110,49 @@ nav ul li:last-child .behind{
     right: -60px;
 }
 
+.upperTag
+{
+    display: none;
+    width: 0;
+    height: 0;
+    position: relative;
+    left: -1.5em;
+    bottom: -1.5em;
+    border-top: 1.5em solid darkgray;
+    border-left: 1.5em solid transparent;
+}
+
+.lowerTag{
+    display: flex;
+    width: 0;
+    height: 0;
+    border-top: 1.5em solid darkgray;
+    border-right: 1.5em solid transparent;
+}
+
 .top header
 {
     float:left;
+}
+
+.count {
+    display: flex;
+    margin: 0 20px;
+}
+.count h1{
+    text-align: center;
+}
+
+.red{
+    color: salmon;
+}
+
+.aqua {
+    color: aqua;
+}
+
+.green {
+    color: darkseagreen;
 }
 
 @keyframes stretch{
@@ -117,10 +161,24 @@ nav ul li:last-child .behind{
 }
 
 /*reduce size of nav boxes*/
+@media only screen and (max-width: 1000px) {
+    
+    .count {
+        display: inline-block;
+    }
+}
+/*reduce size of nav boxes*/
 @media only screen and (max-width: 710px) {
     .navListTitle{
         padding: 0;
     }
+    .upperTag{
+        display: flex;
+    }
+    .lowerTag{
+        display: none;
+    }
+    
 }
 
 /*stack the boxes in the corner*/
