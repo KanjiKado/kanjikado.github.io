@@ -84,15 +84,15 @@ nav ul li:last-child .behind{
 }
 
 .behind{
-    background: darksalmon;
+    width: 100%;
     height: 100%;
-    width: 0%;
+    background: darksalmon;
     position: absolute;
     animation-delay: 1s;
     animation-duration: .3s;
     animation-name: stretch;
     animation-timing-function: linear;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
     
 }
 
@@ -160,11 +160,14 @@ nav ul li:last-child .behind{
     to { width:100% }
 }
 
-/*reduce size of nav boxes*/
+/*reduce some of the more decorative features*/
 @media only screen and (max-width: 1000px) {
     
     .count {
         display: inline-block;
+    }
+    #confetti{
+        display: none;
     }
 }
 /*reduce size of nav boxes*/
@@ -195,10 +198,6 @@ nav ul li:last-child .behind{
     }
     .navListTitle{
         padding: 0 1em;
-    }
-    .behind{
-        height: 0%;
-        width: 100%;
     }
     @keyframes stretch{
         from { height:0% }
