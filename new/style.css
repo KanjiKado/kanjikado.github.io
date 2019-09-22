@@ -118,7 +118,6 @@ nav ul li:last-child .behind{
     max-width: 50%;
     clear: right;
     margin-right: 4%;
-    margin-bottom: 20px;
 }
 .top{
     background: darkgray;
@@ -201,6 +200,7 @@ nav ul li:last-child .behind{
     height: 0;
     border-top: 1.5em solid darkgray;
     border-right: 1.5em solid transparent;
+    position: static;
 }
 
 .top header
@@ -210,25 +210,34 @@ nav ul li:last-child .behind{
 
 #countHolder{
     display: inline;
+    position: absolute;
 }
 
 .count {
     float: left;
     display: flex;
+    width: 23.3%;
     max-height: 20vw;
     max-width: 20vw;
     overflow-y: visible;
-    margin: 0 20px;
+    margin: 0 5%;
 }
 
 .count div > ul{
     text-align: left;
-    margin: 2em 0;
+    margin: 0 0 2em;
+    padding: 0;
 }
 
 .count h1
 {
     text-align: center;
+}
+
+.countTitle{
+    width: 0;
+    overflow: visible;
+    margin-bottom: 1em;
 }
 
 #first{
@@ -242,31 +251,12 @@ nav ul li:last-child .behind{
 
 #third
 {
-    clear: left;
-    float: right;
-}
-
-
-#alsoArrow {
-    padding-right: 4%;
-    float: right;
-    display: flex;
-    flex-direction: column;
-        overflow: visible;
-        height: 0;
+    float: left;
 }
 
 #second ul:first{
     position: relative;
     top: -1em;
-}
-
-#alsoArrow p
-{
-    margin: 0;
-    color: darkgray;
-    font-size: 10em;
-    user-select: none;
 }
 
 .red{
@@ -340,9 +330,6 @@ nav ul li:last-child .behind{
     .lowerTag{
         display: none;
     }
-    #third{
-        clear:none;
-    }
     
 }
 
@@ -359,8 +346,16 @@ nav ul li:last-child .behind{
         float: left;
         flex-direction: column;
     }
-    .count > *{
+    .countTitle{
+        width: auto;
         text-align: center;
+    }
+    #me{
+        margin-bottom: 20px;
+    }
+    .count div > ul
+    {
+        padding-left: 40px;
     }
     #countHolder{
         display: flex;
