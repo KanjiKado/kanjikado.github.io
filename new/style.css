@@ -63,8 +63,12 @@ h1{
 #likes
 {
     display: table;
-    margin: 1.5em auto;
+    margin: 0 auto 1.5em;
 }
+#main {
+    margin-top: 1.5em;
+}
+
 #titlecard{
     padding: 12px;
     padding-right: 0;
@@ -111,7 +115,7 @@ nav ul li:last-child .behind{
     animation-delay: 1.3s;
 }
 
-#me{
+.splashImg{
     display: block;
     float: left;
     min-width: 200px;
@@ -159,6 +163,14 @@ nav ul li:last-child .behind{
     margin-bottom: 0;
 }
 
+.description *:last-child{
+    padding-bottom: 0;
+}
+
+.description{
+    padding-bottom: 0;
+}
+
 .blurb ul
 {
     list-style-type: none;
@@ -175,7 +187,6 @@ nav ul li:last-child .behind{
     content: "◥";
     padding-right: 8px;
 }
-
 #confetti
 {
     position: absolute;
@@ -217,7 +228,7 @@ nav ul li:last-child .behind{
     float: left;
     display: flex;
     width: 23.3%;
-    max-height: 20vw;
+    height: 1px;
     max-width: 20vw;
     overflow-y: visible;
     margin: 0 5%;
@@ -249,11 +260,6 @@ nav ul li:last-child .behind{
     overflow-x: visible;
 }
 
-#third
-{
-    float: left;
-}
-
 #second ul:first{
     position: relative;
     top: -1em;
@@ -277,6 +283,7 @@ nav ul li:last-child .behind{
 }
 
 .seeAlso{
+    background: white;
     float: left;
     clear:both;
 }
@@ -294,10 +301,20 @@ nav ul li:last-child .behind{
     margin: 0 20px 0 0;
 }
 
+.projectTitle{
+    margin-left: auto;
+    display: inline-block;
+}
+
+.blurbGroup{
+    display: flex;
+    flex-direction: column;
+}
+
 /*reduce the target size on small windows or lower-res displays*/
 @media only screen and (max-height: 1080px) {
-    #me{
-        max-width: 33%;
+    .splashImg{
+        max-width: 40%;
     }
     .blurb{
         font-size: 1.33em;
@@ -311,11 +328,28 @@ nav ul li:last-child .behind{
     }
 }
 
+@media only screen and (max-width: 925px)  {
+    .count{
+        margin-left: 1.5%;
+    }
+}
 
-/*hide the also arrow as lists go below the fold*/
-@media only screen and ((max-width: 880px) or (min-height: 800px)) {
-    #alsoArrow{
-        display: none;
+/*reposition for the third count on the next line*/
+@media only screen and ((max-width: 800px) and (min-width: 440px)) {
+    .count{
+        width: 15vw;
+        max-width: 33vw;
+    }
+    #countHolder{
+        position: inherit;
+    }
+    #third{
+        float: none;
+        clear: both;
+        margin-left: 7.5%;
+    }
+    .splashImg{
+        margin-bottom: 20px;
     }
 }
 
@@ -350,15 +384,13 @@ nav ul li:last-child .behind{
         width: auto;
         text-align: center;
     }
-    #me{
-        margin-bottom: 20px;
-    }
     .count div > ul
     {
         padding-left: 40px;
     }
     #countHolder{
         display: flex;
+        width: 100%;
         justify-content: center;
     }
 }
@@ -396,6 +428,86 @@ nav ul li:last-child .behind{
     #titlecard h1
     {
         font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .splashImg
+    {
+        max-width: 50%;
+        margin-right: 5px;
+    }
+    .upperTag{
+        display: none;
+    }
+    .lowerTag{
+        display: flex;
+    }
+    .blurbGroup .blurb{
+        clear: both;
+    }
+    .blurbGroup .description{
+        clear: none;
+    }
+    .blurb
+    {
+        padding: 10px;
+        margin: 0;
+    }
+    .description
+    {
+        padding: 20px;
+        padding-bottom: 10px;
+        background: none;
+    }
+    .blurbGroup{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .lowerTag{
+        display: none;
+    }
+}
+/*bigger mobile mode*/
+@media only screen and (max-width: 440px) {
+    
+    .splashImg
+    {
+        max-width:100%;
+        width: 100%;
+        clear: both;
+    }
+    .blurb
+    {
+        clear: both;
+        margin: 0 0 10px;
+    }
+    #countHolder
+    {
+        flex-direction: column;
+    }
+    .count h1
+    {
+        font-size: 3em;
+    }
+    .count ul
+    {
+        padding: 0 !important;
+    }
+    .count
+    {
+        flex-direction: row;
+        height: inherit;
+        max-width: inherit;
+        margin: 0 auto;
+    }
+    .countTitle
+    {
+        width: 1px;
+        text-align: left;
+        font-size: 1.5em;
     }
 }
 
