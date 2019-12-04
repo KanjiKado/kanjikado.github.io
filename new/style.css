@@ -431,6 +431,7 @@ nav ul li:last-child .behind{
     }
 }
 
+/*less space between the photo and blurb*/
 @media only screen and (max-width: 590px) {
     .splashImg
     {
@@ -448,6 +449,7 @@ nav ul li:last-child .behind{
     }
     .blurbGroup .description{
         clear: none;
+        padding: 
     }
     .blurb
     {
@@ -457,11 +459,18 @@ nav ul li:last-child .behind{
     .description
     {
         padding: 20px;
-        padding-bottom: 10px;
+        padding-top: 7px;
         background: none;
+        overflow: visible;
+    }
+    .projectTitle{
+        padding-left: 10px;
+        overflow: visible;
     }
     .blurbGroup{
         display: inline;
+        width: 1px;
+        overflow: visible;
     }
 }
 
