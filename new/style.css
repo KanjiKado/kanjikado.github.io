@@ -123,6 +123,16 @@ nav ul li:last-child .behind{
     clear: right;
     margin-right: 4%;
 }
+
+.right{
+    float:right;
+    text-align: right;
+}
+
+.splashImg.right{
+    margin-right: 0;
+}
+
 .top{
     background: darkgray;
     display: flex;
@@ -286,6 +296,8 @@ nav ul li:last-child .behind{
     background: white;
     float: left;
     clear:both;
+    width: 100%;
+    margin-bottom: 1em;
 }
 
 .seeAlso h2{
