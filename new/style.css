@@ -323,6 +323,16 @@ nav ul li:last-child .behind{
     flex-direction: column;
 }
 
+.indent li
+{
+    list-style: none
+}
+.indent li::before
+{
+    content: "◦";
+    margin-right: .5em;
+}
+
 /*reduce the target size on small windows or lower-res displays*/
 @media only screen and (max-height: 1080px) {
     .splashImg{
@@ -344,6 +354,43 @@ nav ul li:last-child .behind{
     {
         padding-top: 1em;
         padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 880px) and (min-width: 780px) {
+    #countHolder{
+        display: contents;
+    }
+    #third{
+        max-width: none;
+        margin-left: 1.5em;
+    }
+    .count{
+        width: inherit;
+        max-width: 50%;
+        height: inherit;
+        display: flex;
+        float: left;
+        clear: none;
+        margin: 1em 0;
+    }
+    .countTitle
+    {
+        margin-bottom: 0;
+    }
+    .count div > ul
+    {
+        width: 100%;
+        display: inline;
+    }
+    .count li
+    {
+        display: inline-block;
+    }
+    .count li::before
+    {
+        content: "•";
+        margin: 0 .25em 0 .75em;
     }
 }
 
