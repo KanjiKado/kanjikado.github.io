@@ -398,6 +398,9 @@ nav ul li:last-child .behind{
 @media only screen and (max-width: 1000px) {
     #confetti{
         display: none;
+    }
+}
+
 @media only screen and (max-width: 925px)  {
     .count{
         margin-left: 1.5%;
