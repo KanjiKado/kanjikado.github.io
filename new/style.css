@@ -24,7 +24,8 @@ html
 }
 body{
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
+    position: relative;
 }
 
 .colorBar{
@@ -294,6 +295,8 @@ nav ul li:last-child .behind{
     margin: 0 20px 0 0;
 }
 
+
+
 /*reduce the target size on small windows or lower-res displays*/
 @media only screen and (max-height: 1080px) {
     #me{
@@ -304,17 +307,23 @@ nav ul li:last-child .behind{
     }
 }
 
-/*reduce some of the more decorative features*/
-@media only screen and (max-width: 1000px) {
-    #confetti{
-        display: none;
+@media only screen and (min-width: 1080px) {
+    #countHolder{
+        width: calc(100%-401px);
+    }
+    .countTitle{
+        width: auto;
+    }
+    .count div > ul
+    {
+        padding-top: 1em;
+        padding-left: 40px;
     }
 }
 
-
-/*hide the also arrow as lists go below the fold*/
-@media only screen and ((max-width: 880px) or (min-height: 800px)) {
-    #alsoArrow{
+/*reduce some of the more decorative features*/
+@media only screen and (max-width: 1000px) {
+    #confetti{
         display: none;
     }
 }
