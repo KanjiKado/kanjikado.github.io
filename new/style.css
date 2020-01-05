@@ -258,7 +258,7 @@ nav ul li:last-child .behind{
 .countTitle{
     width: 0;
     overflow: visible;
-    margin-bottom: 1em;
+    margin-bottom: .8em;
 }
 
 #first{
@@ -344,10 +344,8 @@ nav ul li:last-child .behind{
 }
 
 @media only screen and (min-width: 1080px) {
-    #countHolder{
-        width: calc(100%-401px);
-    }
     .countTitle{
+        margin-bottom: 0;
         width: auto;
     }
     .count div > ul
@@ -356,23 +354,41 @@ nav ul li:last-child .behind{
         padding-left: 40px;
     }
 }
-
-@media only screen and (max-width: 880px) and (min-width: 780px) {
+/*reduce some of the more decorative features*/
+@media only screen and (max-width: 1000px) {
+    #confetti{
+        display: none;
+    }
+}
+/*
+@media only screen and (max-width: 925px)  {
+    .count{
+        margin-left: 1.5%;
+    }
+}
+*/
+/*reorder bullet points horizontally*/
+@media only screen and (max-width: 925px) and (min-width: 771px), only screen and (max-width: 660px) and (min-width: 551px){
     #countHolder{
         display: contents;
     }
     #third{
         max-width: none;
-        margin-left: 1.5em;
+        margin-left: .5em;
     }
     .count{
         width: inherit;
-        max-width: 50%;
+        max-width: calc(100% - 401px);
         height: inherit;
         display: flex;
         float: left;
         clear: none;
         margin: 1em 0;
+    }
+    .count h1
+    {
+        text-align: right;
+        min-width: 1.5em;
     }
     .countTitle
     {
@@ -380,6 +396,8 @@ nav ul li:last-child .behind{
     }
     .count div > ul
     {
+        position: relative;
+        left: -1em;
         width: 100%;
         display: inline;
     }
@@ -394,54 +412,9 @@ nav ul li:last-child .behind{
     }
 }
 
-/*reduce some of the more decorative features*/
-@media only screen and (max-width: 1000px) {
-    #confetti{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 925px)  {
-    .count{
-        margin-left: 1.5%;
-    }
-}
-
-/*reposition for the third count on the next line*/
-@media only screen and ((max-width: 800px) and (min-width: 440px)) {
-    .count{
-        width: 15vw;
-        max-width: 33vw;
-    }
-    #countHolder{
-        position: inherit;
-    }
-    #third{
-        float: none;
-        clear: both;
-        margin-left: 7.5%;
-    }
-    .splashImg{
-        margin-bottom: 20px;
-    }
-}
-
-/*reduce size of nav boxes*/
-@media only screen and (max-width: 710px) {
-    .navListTitle{
-        padding: 0;
-    }
-    .upperTag{
-        display: flex;
-    }
-    .lowerTag{
-        display: none;
-    }
-    
-}
 
 /*reorder the highlight numbers*/
-@media only screen and (max-width: 660px)  {
+@media only screen and (max-width: 770px) and (min-width: 661px)  {
     
     #forceBreak{
         display: block;
@@ -468,6 +441,29 @@ nav ul li:last-child .behind{
     }
 }
 
+@media only screen and (max-width: 660px) and (min-width: 551px)
+{
+    .count{
+        max-width: none;
+        clear: both;
+        margin-left: .5em;
+    }
+}
+
+/*reduce size of nav boxes*/
+@media only screen and (max-width: 770px) {
+    .navListTitle{
+        padding: 0;
+    }
+    .upperTag{
+        display: flex;
+    }
+    .lowerTag{
+        display: none;
+    }
+    
+}
+
 /*stack the boxes in the corner*/
 @media only screen and (max-width: 610px)  {
     nav {
@@ -489,23 +485,8 @@ nav ul li:last-child .behind{
     }
 }
 
-/*reduce the size of the boxes*/
-@media only screen and (max-width: 440px) {
-    nav ul li p{
-        padding: 0;
-    }
-}
-
-/*reduce name size*/
-@media only screen and (max-width: 410px) {
-    #titlecard h1
-    {
-        font-size: 6vw;
-    }
-}
-
 /*less space between the photo and blurb*/
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 630px) {
     .splashImg
     {
         max-width: 50%;
@@ -547,19 +528,24 @@ nav ul li:last-child .behind{
     }
 }
 
-@media only screen and (max-width: 500px) {
+/*bigger mobile mode*/
+@media only screen and (max-width: 550px) {
+    
     .lowerTag{
         display: none;
     }
-}
-/*bigger mobile mode*/
-@media only screen and (max-width: 440px) {
-    
+    .upperTag{
+        display: flex;
+    }
     .splashImg
     {
+        display: block;
+        float: none;
         max-width:100%;
-        width: 100%;
+        width: auto;
+        margin: 0 auto;
         clear: both;
+        padding-bottom: 1em;
     }
     .blurb
     {
@@ -573,6 +559,8 @@ nav ul li:last-child .behind{
     .count h1
     {
         font-size: 3em;
+        text-align: right;
+        min-width: 1.5em;
     }
     .count ul
     {
@@ -584,12 +572,32 @@ nav ul li:last-child .behind{
         height: inherit;
         max-width: inherit;
         margin: 0 auto;
+        padding: 0 175px 0 40px;
     }
     .countTitle
     {
         width: 1px;
         text-align: left;
         font-size: 1.5em;
+    }
+}
+
+/*reduce the size of the boxes*/
+@media only screen and (max-width: 440px) {
+    nav ul li p{
+        padding: 0;
+    }
+}
+
+/*reduce name size*/
+@media only screen and (max-width: 410px) {
+    #titlecard h1
+    {
+        font-size: 6vw;
+    }
+    .splashImg
+    {
+        padding-bottom: 0em;
     }
 }
 
