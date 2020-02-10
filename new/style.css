@@ -1,16 +1,27 @@
-html
-{
+:root{
+    --fontColor: #302E1B; /*#535353;*/
+    --colorA: #E4DA95; /*aqua*/
+    --colorB: #4A4940;/*darksalmon*/
+    --colorC: #7D7746;/*darkseagreen*/
+    --outerBgColor:#FDFDFA;/*white*/
+    --bgColor: #E9E9E9;
+    --boxColor: white; /*darkgray*/
+    --lnewColor: #9F9F9F;
+    --lhoverColor: black;
+    --lclickedColor: brown;
+}
+
+html {
 	/*background-image : url("http://gdavis.io/images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
 	background-color : #FFFFFF;
 	background-size: cover;*/
-	color : #535353;
+	color : var(--fontColor);/*#535353;*/
     font-family: 'Rokkitt', serif;
     height: 100%;
     margin: 0 3px;
-    overflow-x: hidden;
     /*
     margin-right: 3px;
     background-origin: border-box;
@@ -21,16 +32,33 @@ html
     
     border-left: 3px solid white;
     border-image: linear-gradient(to bottom, aqua 33.3%, darksalmon 33.4%, darksalmon 66.6%, darkseagreen 66.7%) 3;*/
-}
-body{
-    margin: 0 auto;
-    max-width: 1200px;
+    height: inherit;
 }
 
+body{
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    background: var(--outerBgColor);
+}
+#main{
+    background: var(--bgColor);
+    background-repeat: repeat-y;
+}
+
+a{
+    color: var(--lnewColor);
+}
+a:hover{
+    color: var(--lhoverColor);
+}
 .colorBar{
     width: 3px;
     height: 100%;
+    background: linear-gradient(to top, var(--colorA) 33.3%, var(--colorB) 33.4%, var(--colorB) 66.6%, var(--colorC) 66.7%);
+    /*
     background: linear-gradient(to top, aqua 33.3%, darksalmon 33.4%, darksalmon 66.6%, darkseagreen 66.7%);
+    */
     /*
     animation-duration: 1s;
     animation-direction: alternate;
@@ -65,9 +93,6 @@ h1{
     display: table;
     margin: 0 auto 1.5em;
 }
-#main {
-    margin-top: 1.5em;
-}
 
 #titlecard{
     padding: 12px;
@@ -75,10 +100,13 @@ h1{
     padding-bottom: 6px;
     display: inline-block;
 }
+#main{
+    padding-top: 1.5em;
+}
 nav
 {
     margin-left: auto;
-    background: darkgray;
+    background: var(--boxColor);
     display: flex;
     position: relative;
 }
@@ -106,12 +134,12 @@ nav ul li{
     width: 100px;
 }
 nav ul li:first-child .behind{
-    background-color: aqua;
+    background-color: var(--colorA);
     animation-delay: .7s;
 }
 
 nav ul li:last-child .behind{
-    background-color: darkseagreen;
+    background-color: var(--colorC);
     animation-delay: 1.3s;
 }
 
@@ -124,24 +152,20 @@ nav ul li:last-child .behind{
     margin-right: 4%;
 }
 
-.right{
-    float:right;
-    text-align: right;
-}
 
 .splashImg.right{
     margin-right: 0;
 }
 
 .top{
-    background: darkgray;
+    background: var(--boxColor);
     display: flex;
 }
 
 .behind{
     width: 100%;
     height: 100%;
-    background: darksalmon;
+    background: var(--colorB);
     position: absolute;
     animation-delay: 1s;
     animation-duration: .3s;
@@ -157,7 +181,7 @@ nav ul li:last-child .behind{
     flex-direction: column;
     margin: 0 4%;
     padding: 25px;
-    background-color: darkgray;
+    background-color: var(--boxColor);
     line-height: 1.3;
 }
 
@@ -211,7 +235,7 @@ nav ul li:last-child .behind{
     position: relative;
     left: -1.5em;
     bottom: -1.5em;
-    border-top: 1.5em solid darkgray;
+    border-top: 1.5em solid var(--boxColor);
     border-left: 1.5em solid transparent;
 }
 
@@ -219,7 +243,7 @@ nav ul li:last-child .behind{
     display: flex;
     width: 0;
     height: 0;
-    border-top: 1.5em solid darkgray;
+    border-top: 1.5em solid var(--boxColor);
     border-right: 1.5em solid transparent;
     position: static;
 }
@@ -261,8 +285,12 @@ nav ul li:last-child .behind{
     margin-bottom: .8em;
 }
 
-#first{
-    
+br{
+    clear:both;
+}
+
+#forceBreak{
+    display: none;
 }
 
 #lookArrow{
@@ -275,16 +303,16 @@ nav ul li:last-child .behind{
     top: -1em;
 }
 
-.red{
-    color: salmon;
+.colorA {
+    color: var(--colorA);
 }
 
-.aqua {
-    color: aqua;
+.colorB{
+    color: var(--colorB);
 }
 
-.green {
-    color: darkseagreen;
+.colorC {
+    color: var(--colorC);
 }
 
 @keyframes stretch{
@@ -293,10 +321,9 @@ nav ul li:last-child .behind{
 }
 
 .seeAlso{
-    background: white;
+    display: inline;
     float: left;
     clear:both;
-    width: 100%;
     margin-bottom: 1em;
 }
 
@@ -311,6 +338,10 @@ nav ul li:last-child .behind{
     height: 75px;
     border: 1px solid darkgray;
     margin: 0 20px 0 0;
+}
+
+.right{
+    float:right;
 }
 
 .projectTitle{
@@ -360,13 +391,34 @@ nav ul li:last-child .behind{
         display: none;
     }
 }
-/*
-@media only screen and (max-width: 925px)  {
-    .count{
-        margin-left: 1.5%;
+
+@media only screen and (max-width: 900px)  {
+    .blurbGroup .blurb{
+        clear: both;
+        padding: 10px;
+        margin: 0;
+    }
+    .blurbGroup .description{
+        clear: none;
+    }
+    .blurbGroup{
+        display: inline;
+        width: 1px;
+        overflow: visible;
+    }
+    .description
+    {
+        padding: 20px;
+        padding-top: 7px;
+        background: none;
+        overflow: visible;
+    }
+    .projectTitle{
+        padding-left: 10px;
+        overflow: visible;
     }
 }
-*/
+
 /*reorder bullet points horizontally*/
 @media only screen and (max-width: 925px) and (min-width: 771px), only screen and (max-width: 660px) and (min-width: 551px){
     #countHolder{
@@ -419,7 +471,6 @@ nav ul li:last-child .behind{
     #forceBreak{
         display: block;
         width: 100%;
-        clear: both;
     }
     .count{
         margin-top: 2em;
@@ -486,7 +537,7 @@ nav ul li:last-child .behind{
 }
 
 /*less space between the photo and blurb*/
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 670px) {
     .splashImg
     {
         max-width: 50%;
@@ -498,33 +549,10 @@ nav ul li:last-child .behind{
     .lowerTag{
         display: flex;
     }
-    .blurbGroup .blurb{
-        clear: both;
-    }
-    .blurbGroup .description{
-        clear: none;
-        padding: 
-    }
     .blurb
     {
         padding: 10px;
         margin: 0;
-    }
-    .description
-    {
-        padding: 20px;
-        padding-top: 7px;
-        background: none;
-        overflow: visible;
-    }
-    .projectTitle{
-        padding-left: 10px;
-        overflow: visible;
-    }
-    .blurbGroup{
-        display: inline;
-        width: 1px;
-        overflow: visible;
     }
 }
 
