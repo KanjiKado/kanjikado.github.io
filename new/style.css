@@ -223,6 +223,7 @@ nav ul li:last-child .behind{
 }
 #confetti
 {
+    display:none;
     position: absolute;
     right: -60px;
 }
@@ -388,6 +389,37 @@ br{
 {
     content: "◦";
     margin-right: .5em;
+}
+
+.vertical{
+    /*display:flex !important;*/
+    flex-direction: column !important;
+    clear: both;
+    float: right;
+    width: 50%;
+}
+.vertical * {
+    text-align: left !important;
+    float: none;
+    display: block;
+    height: inherit;
+    width: auto;
+    max-width: 1000px;
+}
+
+.vertical > * {
+    display: flex;
+    margin: 1em auto;
+}
+
+.vertical h1{
+    min-width: 1.5em;
+    font-size: 2.5em;
+}
+
+.vertical .countTitle
+{
+    font-size: 1.5em;
 }
 
 /*reduce the target size on small windows or lower-res displays*/
