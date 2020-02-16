@@ -324,20 +324,37 @@ br{
     display: inline;
     float: left;
     clear:both;
-    margin-bottom: 1em;
+    position: sticky;
+    bottom: 0;
+    background: var(--bgColor);
+    padding-top: 10px;
 }
 
 .seeAlso h2{
     margin: .4em 0;
 }
 
-.seeAlso h3{
+.labeledSquare{
     overflow: hidden;
     display: inline-block;
     width: 75px;
     height: 75px;
-    border: 1px solid darkgray;
-    margin: 0 20px 0 0;
+    border: 1px solid var(--lnewColor);
+    margin: 0 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.seeAlso h3{
+    margin: 0px;
+    position: relative;
+    z-index: 10;
+    color: var(--boxColor);
+}
+
+.seeAlso img{
+    position: absolute;
+    z-index: 9;
 }
 
 .right{
@@ -347,6 +364,14 @@ br{
 .projectTitle{
     margin-left: auto;
     display: inline-block;
+}
+
+.projectEntry::after{
+    clear: both;
+	display: block;
+	white-space: pre;
+    content: "\A";
+    line-height: 2em;
 }
 
 .blurbGroup{
