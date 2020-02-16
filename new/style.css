@@ -328,6 +328,7 @@ br{
     bottom: 0;
     background: var(--bgColor);
     padding-top: 10px;
+    display: none;
 }
 
 .seeAlso h2{
