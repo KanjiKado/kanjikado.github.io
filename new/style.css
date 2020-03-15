@@ -278,6 +278,7 @@ nav ul li:last-child .behind{
 .count h1
 {
     text-align: center;
+    margin-right: 3px;
 }
 
 .countTitle{
