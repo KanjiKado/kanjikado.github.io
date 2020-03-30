@@ -12,26 +12,10 @@
 }
 
 html {
-	/*background-image : url("http://gdavis.io/images/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-	background-color : #FFFFFF;
-	background-size: cover;*/
 	color : var(--fontColor);/*#535353;*/
     font-family: 'Rokkitt', serif;
     height: 100%;
     margin: 0 3px;
-    /*
-    margin-right: 3px;
-    background-origin: border-box;
-    background: linear-gradient(to left, transparent 2.99px, white 3px),
-    linear-gradient(to top, aqua 33.3%, darksalmon 33.4%, darksalmon 66.6%, darkseagreen 66.7%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
-    border-left: 3px solid white;
-    border-image: linear-gradient(to bottom, aqua 33.3%, darksalmon 33.4%, darksalmon 66.6%, darkseagreen 66.7%) 3;*/
     height: inherit;
 }
 
@@ -56,13 +40,6 @@ a:hover{
     width: 3px;
     height: 100%;
     background: linear-gradient(to top, var(--colorA) 33.3%, var(--colorB) 33.4%, var(--colorB) 66.6%, var(--colorC) 66.7%);
-    /*
-    background: linear-gradient(to top, aqua 33.3%, darksalmon 33.4%, darksalmon 66.6%, darkseagreen 66.7%);
-    */
-    /*
-    animation-duration: 1s;
-    animation-direction: alternate;
-    */
 }
 
 .leftAnchor
@@ -88,11 +65,6 @@ h1{
     display: block;
     margin: 0;
 }
-#likes
-{
-    display: table;
-    margin: 0 auto 1.5em;
-}
 
 #titlecard{
     padding: 12px;
@@ -100,9 +72,16 @@ h1{
     padding-bottom: 6px;
     display: inline-block;
 }
+
+#titlecard a{
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
 #main{
     padding-top: 1.5em;
 }
+
 nav
 {
     margin-left: auto;
@@ -133,6 +112,7 @@ nav ul li{
     padding: 0 1em;
     width: 100px;
 }
+
 nav ul li:first-child .behind{
     background-color: var(--colorA);
     animation-delay: .7s;
@@ -160,6 +140,11 @@ nav ul li:last-child .behind{
 .top{
     background: var(--boxColor);
     display: flex;
+}
+
+.top header
+{
+    float:left;
 }
 
 .behind{
@@ -197,14 +182,6 @@ nav ul li:last-child .behind{
     margin-bottom: 0;
 }
 
-.description *:last-child{
-    padding-bottom: 0;
-}
-
-.description{
-    padding-bottom: 0;
-}
-
 .blurb ul
 {
     list-style-type: none;
@@ -221,6 +198,7 @@ nav ul li:last-child .behind{
     content: "◥";
     padding-right: 8px;
 }
+
 #confetti
 {
     display:none;
@@ -228,45 +206,17 @@ nav ul li:last-child .behind{
     right: -60px;
 }
 
-.upperTag
-{
-    display: none;
-    width: 0;
-    height: 0;
-    position: relative;
-    left: -1.5em;
-    bottom: -1.5em;
-    border-top: 1.5em solid var(--boxColor);
-    border-left: 1.5em solid transparent;
-}
-
-.lowerTag{
-    display: flex;
-    width: 0;
-    height: 0;
-    border-top: 1.5em solid var(--boxColor);
-    border-right: 1.5em solid transparent;
-    position: static;
-}
-
-.top header
-{
-    float:left;
-}
-
 #countHolder{
     display: inline;
-    position: absolute;
 }
 
 .count {
     float: left;
     display: flex;
-    width: 23.3%;
-    height: 1px;
+    width: 0%;
     max-width: 20vw;
     overflow-y: visible;
-    margin: 0 5%;
+    margin: 0 15% 0 3%;
 }
 
 .count div > ul{
@@ -295,16 +245,6 @@ br{
     display: none;
 }
 
-#lookArrow{
-    width: 0;
-    overflow-x: visible;
-}
-
-#second ul:first{
-    position: relative;
-    top: -1em;
-}
-
 .colorA {
     color: var(--colorA);
 }
@@ -322,44 +262,6 @@ br{
     to { width:100% }
 }
 
-.seeAlso{
-    display: inline;
-    float: left;
-    clear:both;
-    position: sticky;
-    bottom: 0;
-    background: var(--bgColor);
-    padding-top: 10px;
-    display: none;
-}
-
-.seeAlso h2{
-    margin: .4em 0;
-}
-
-.labeledSquare{
-    overflow: hidden;
-    display: inline-block;
-    width: 75px;
-    height: 75px;
-    border: 1px solid var(--lnewColor);
-    margin: 0 10px;
-    position: relative;
-    z-index: 10;
-}
-
-.seeAlso h3{
-    margin: 0px;
-    position: relative;
-    z-index: 10;
-    color: var(--boxColor);
-}
-
-.seeAlso img{
-    position: absolute;
-    z-index: 9;
-}
-
 .right{
     float:right;
 }
@@ -367,6 +269,8 @@ br{
 .projectTitle{
     margin-left: auto;
     display: inline-block;
+    padding-left: 10px;
+    overflow: visible;
 }
 
 .projectEntry::after{
@@ -392,48 +296,6 @@ br{
     margin-right: .5em;
 }
 
-.vertical{
-    flex-direction: column !important;
-    clear: both;
-    float: right;
-    width: 50%;
-}
-.vertical * {
-    text-align: left !important;
-    float: none;
-    display: block;
-    height: inherit;
-    width: auto;
-    max-width: 1000px;
-}
-
-.vertical .count {
-    display: flex;
-    margin: 1em auto;
-}
-
-.vertical a{
-    text-decoration: none;
-}
-
-.vertical a p{
-    text-decoration: underline;
-}
-
-.vertical .countTitle{
-    color: var(--fontColor);
-}
-
-.vertical h1{
-    min-width: 1.5em;
-    font-size: 2.5em;
-}
-
-.vertical .countTitle
-{
-    font-size: 1.5em;
-}
-
 /*reduce the target size on small windows or lower-res displays*/
 @media only screen and (max-height: 1080px) {
     .splashImg{
@@ -444,132 +306,12 @@ br{
     }
 }
 
-@media only screen and (min-width: 1080px) {
-    .countTitle{
-        margin-bottom: 0;
-        width: auto;
-    }
-    .count div > ul
-    {
-        padding-top: 1em;
-        padding-left: 40px;
-    }
-}
-/*reduce some of the more decorative features*/
+/*reduce some of the more decorative features
 @media only screen and (max-width: 1000px) {
     #confetti{
         display: none;
     }
-}
-
-@media only screen and (max-width: 900px)  {
-    .blurbGroup .blurb{
-        clear: both;
-        padding: 10px;
-        margin: 0;
-    }
-    .blurbGroup .description{
-        clear: none;
-    }
-    .blurbGroup{
-        display: inline;
-        width: 1px;
-        overflow: visible;
-    }
-    .description
-    {
-        padding: 20px;
-        padding-top: 7px;
-        background: none;
-        overflow: visible;
-    }
-    .projectTitle{
-        padding-left: 10px;
-        overflow: visible;
-    }
-}
-
-/*reorder bullet points horizontally*/
-@media only screen and (max-width: 925px) and (min-width: 771px), only screen and (max-width: 660px) and (min-width: 551px){
-    #countHolder{
-        display: contents;
-    }
-    #third{
-        max-width: none;
-        margin-left: .5em;
-    }
-    .count{
-        width: inherit;
-        max-width: calc(100% - 401px);
-        height: inherit;
-        display: flex;
-        float: left;
-        clear: none;
-        margin: 1em 0;
-    }
-    .count h1
-    {
-        text-align: right;
-        min-width: 1.5em;
-    }
-    .countTitle
-    {
-        margin-bottom: 0;
-    }
-    .count div > ul
-    {
-        position: relative;
-        left: -1em;
-        width: 100%;
-        display: inline;
-    }
-    .count li
-    {
-        display: inline-block;
-    }
-    .count li::before
-    {
-        content: "•";
-        margin: 0 .25em 0 .75em;
-    }
-}
-
-
-/*reorder the highlight numbers*/
-@media only screen and (max-width: 770px) and (min-width: 661px)  {
-    
-    #forceBreak{
-        display: block;
-        width: 100%;
-    }
-    .count{
-        margin-top: 2em;
-        float: left;
-        flex-direction: column;
-    }
-    .countTitle{
-        width: auto;
-        text-align: center;
-    }
-    .count div > ul
-    {
-        padding-left: 40px;
-    }
-    #countHolder{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width: 660px) and (min-width: 551px)
-{
-    .count{
-        max-width: none;
-        clear: both;
-        margin-left: .5em;
-    }
-}
+}*/
 
 /*reduce size of nav boxes*/
 @media only screen and (max-width: 770px) {
@@ -580,13 +322,12 @@ br{
         display: flex;
     }
     .lowerTag{
-        display: none;
+        display: none !important;
     }
-    
 }
 
 /*stack the boxes in the corner*/
-@media only screen and (max-width: 610px)  {
+@media only screen and (max-width: 630px)  {
     nav {
         float: right;
     }
@@ -607,7 +348,7 @@ br{
 }
 
 /*less space between the photo and blurb*/
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 680px) {
     .splashImg
     {
         max-width: 50%;
@@ -627,7 +368,7 @@ br{
 }
 
 /*bigger mobile mode*/
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 570px) {
     
     .lowerTag{
         display: none;
@@ -670,7 +411,16 @@ br{
         height: inherit;
         max-width: inherit;
         margin: 0 auto;
-        padding: 0 175px 0 40px;
+        padding-left: 55px;
+        width: 100%;
+    }
+    
+    .vertical h1{
+        text-align: left;
+    }
+    
+    .upperTag{
+        display: none;
     }
     .countTitle
     {
@@ -679,7 +429,6 @@ br{
         font-size: 1.5em;
     }
 }
-
 /*reduce the size of the boxes*/
 @media only screen and (max-width: 440px) {
     nav ul li p{

@@ -1,0 +1,137 @@
+#likes
+{
+    display: table;
+    margin: 0 auto 1.5em;
+}
+
+.upperTag
+{
+    display: none;
+    width: 0;
+    height: 0;
+    position: relative;
+    left: -1.5em;
+    bottom: -1.5em;
+    border-top: 1.5em solid var(--boxColor);
+    border-left: 1.5em solid transparent;
+}
+
+.lowerTag{
+    display: flex;
+    width: 0;
+    height: 0;
+    border-top: 1.5em solid var(--boxColor);
+    border-right: 1.5em solid transparent;
+    position: static;
+}
+
+#second ul:first{
+    position: relative;
+    top: -1em;
+}
+
+@media only screen and (min-width: 1080px) {
+    .countTitle{
+        margin-bottom: 0;
+        width: auto;
+    }
+    .count div > ul
+    {
+        padding-top: 1em;
+        padding-left: 40px;
+    }
+}
+
+
+/*reorder bullet points horizontally*/
+@media only screen and (max-width: 925px) and (min-width: 771px),  only screen and (max-width: 925px) and (min-width: 571px) and (max-height: 1080px), only screen and (max-width: 680px) and (min-width: 571px){
+    #countHolder{
+        display: contents;
+    }
+    #third{
+        max-width: none;
+        margin-left: .5em;
+    }
+    .count{
+        width: inherit;
+        max-width: calc(100% - 401px);
+        height: inherit;
+        display: flex;
+        float: left;
+        clear: none;
+        margin: 1em 0;
+    }
+    .count h1
+    {
+        text-align: right;
+        min-width: 1.5em;
+    }
+    .countTitle
+    {
+        margin-bottom: 0;
+    }
+    .count div > ul
+    {
+        position: relative;
+        left: -1em;
+        width: 100%;
+        display: inline;
+    }
+    .count li
+    {
+        display: inline-block;
+    }
+    .count li::before
+    {
+        content: "•";
+        margin: 0 .25em 0 .75em;
+    }
+}
+
+/*reorder the highlight numbers*/
+@media only screen and (max-width: 770px) and (min-width: 681px) and (min-height: 1079px) {
+    
+    #forceBreak{
+        display: block;
+        width: 100%;
+    }
+    .count{
+        width: 23%;
+        padding: 0;
+        margin: 2em 0 0;
+        float: left;
+        flex-direction: column;
+    }
+    .countTitle{
+        width: auto;
+        text-align: center;
+    }
+    .count div > ul
+    {
+        padding-left: 40px;
+    }
+    #countHolder{
+        display: flex;
+        width: 100%;
+        justify-content:space-around;
+    }
+}
+
+/*reorder the highlight numbers*/
+@media only screen and (max-width: 770px) and (max-height: 1080px){
+    #second{
+        max-width: none;
+        margin-left: .5em;
+    }
+}
+
+@media only screen and (max-width: 680px) and (min-width: 571px) and (min-height: 1079px)
+{
+    .count{
+        max-width: none;
+        clear: both;
+        margin-left: .5em;
+    }
+}
+
+

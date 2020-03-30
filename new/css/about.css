@@ -1,0 +1,43 @@
+.vertical{
+    flex-direction: column !important;
+    float: right;
+    width: 50%;
+}
+.vertical * {
+    text-align: left;
+    float: none;
+    display: block;
+    height: inherit;
+    width: auto;
+    max-width: 1000px;
+}
+
+.vertical .count {
+    display: flex;
+    margin: 1em auto;
+}
+
+.vertical a{
+    text-decoration: none;
+}
+
+.vertical a p{
+    text-decoration: underline;
+}
+
+.vertical .countTitle{
+    color: var(--fontColor);
+}
+
+.vertical h1{
+    min-width: 1.5em;
+    font-size: 2.5em;
+}
+
+.vertical .countTitle
+{
+    font-size: 1.5em;
+}
+#countHolder{
+        display: contents;
+}

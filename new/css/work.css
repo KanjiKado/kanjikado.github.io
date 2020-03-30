@@ -1,0 +1,68 @@
+.description *:last-child{
+    padding-bottom: 0;
+}
+
+.description{
+    padding-bottom: 0;
+}
+
+.seeAlso{
+    display: inline;
+    float: left;
+    clear:both;
+    position: sticky;
+    bottom: 0;
+    background: var(--bgColor);
+    padding-top: 10px;
+    display: none;
+}
+
+.seeAlso h2{
+    margin: .4em 0;
+}
+
+.labeledSquare{
+    overflow: hidden;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: 1px solid var(--lnewColor);
+    margin: 0 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.seeAlso h3{
+    margin: 0px;
+    position: relative;
+    z-index: 10;
+    color: var(--boxColor);
+}
+
+.seeAlso img{
+    position: absolute;
+    z-index: 9;
+}
+
+@media only screen and (max-width: 1100px)  {
+    .blurbGroup .blurb{
+        clear: both;
+        padding: 10px;
+        margin: 0;
+    }
+    .blurbGroup .description{
+        clear: none;
+    }
+    .blurbGroup{
+        display: inline;
+        width: 1px;
+        overflow: visible;
+    }
+    .description
+    {
+        padding: 20px;
+        padding-top: 7px;
+        background: none;
+        overflow: visible;
+    }
+}
