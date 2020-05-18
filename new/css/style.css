@@ -86,7 +86,7 @@ h1{
     animation-iteration-count: 2;
     transition-property: color;
     transition-timing-function: ease-out;
-    transition-duration: .5s;
+    transition-duration: .4s;
 }
 
 #titlecard h1:hover{
