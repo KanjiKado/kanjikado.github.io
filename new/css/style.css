@@ -1,14 +1,13 @@
 :root{
     --fontColor: #302E1B; /*#535353;*/
-    --colorA: #E4DA95; /*aqua*/
-    --colorB: #4A4940;/*darksalmon*/
-    --colorC: #7D7746;/*darkseagreen*/
-    --outerBgColor:#FDFDFA;/*white*/
+    --colorA: #95e498; /*E4DA95*/
+    --colorB: #535d54;/*4A4940*/
+    --colorC: #467d49;/*7D7746*/
+    --outerBgColor:#FAFDFA;/*white*/
     --bgColor: #E9E9E9;
     --boxColor: white; /*darkgray*/
     --lnewColor: #9F9F9F;
     --lhoverColor: black;
-    --lclickedColor: brown;
 }
 
 html {
@@ -78,6 +77,22 @@ h1{
     color: var(--fontColor);
 }
 
+#titlecard h1{
+    animation-name: toColor;
+    animation-delay: 1.5s;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: .5s;
+}
+
+#titlecard h1:hover{
+    color: var(--colorC);
+}
+
 #main{
     padding-top: 1.5em;
 }
@@ -113,15 +128,35 @@ nav ul li{
     width: 100px;
 }
 
+/*
+nav a{
+    color: var(--lnavListColor);
+}*/
+
 nav ul li:first-child .behind{
     background-color: var(--colorA);
     animation-delay: .7s;
 }
 
+
 nav ul li:last-child .behind{
     background-color: var(--colorC);
     animation-delay: 1.3s;
 }
+
+/*
+nav ul li:first-child a {
+    color: var(--colorB);
+}
+
+nav ul li:last-child a {
+    color: var(--colorA);
+}
+
+nav ul li a {
+    color: var(--colorC);
+}*/
+
 
 .splashImg{
     display: block;
@@ -260,6 +295,11 @@ br{
 @keyframes stretch{
     from { width:0% }
     to { width:100% }
+}
+
+@keyframes toColor{
+    from { color: var(--fontColor); }
+    to { color: var(--colorC);  }
 }
 
 .right{
