@@ -40,6 +40,11 @@
         padding-top: 1em;
         padding-left: 40px;
     }
+    
+    .count:last-child ul
+    { 
+        width:10em;
+    }
 }
 
 
