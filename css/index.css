@@ -1,7 +1,15 @@
+:root{
+    --titleColor: var(--colorA);
+}
 #likes
 {
     display: table;
     margin: 0 auto 1.5em;
+}
+
+#heart{
+  color: transparent;  
+  text-shadow: 0 0 0 var(--colorA);
 }
 
 .upperTag

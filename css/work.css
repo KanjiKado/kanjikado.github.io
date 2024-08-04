@@ -1,3 +1,6 @@
+:root{
+    --titleColor: var(--colorB);
+}
 .description *:last-child{
     padding-bottom: 0;
 }

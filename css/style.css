@@ -1,28 +1,34 @@
 :root{
     --fontColor: #302E1B; /*#535353;*/
-    --colorA: #95e498; /*E4DA95*/
-    --colorB: #535d54;/*4A4940*/
-    --colorC: #467d49;/*7D7746*/
+    --colorA: #BF3F3F; /*E4DA95*/
+    --colorB: #F2B950;/*4A4940*/
+    --colorC: #9B72A6;/*7D7746*/
     --outerBgColor:#FAFDFA;/*white*/
-    --bgColor: #E9E9E9;
+    --bgColor: #E9E9E9CC;
     --boxColor: white; /*darkgray*/
-    --lnewColor: #9F9F9F;
-    --lhoverColor: black;
+    --lnewColor: var(--fontColor);
+    --lnewColor2: #302E1B77;
+    --lhoverColor: #AAA;
+    /*will be overriden by other pages, default value*/
+    --titleColor: var(--colorC);
 }
 
-html {
-	color : var(--fontColor);/*#535353;*/
+html{
+    color : var(--fontColor);/*#535353;*/
     font-family: 'Rokkitt', serif;
     height: 100%;
     margin: 0 3px;
     height: inherit;
+    background-image: url("../img/bg_blur.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body{
     margin: 0 auto;
     position: relative;
     max-width: 1200px;
-    background: var(--outerBgColor);
 }
 #main{
     background: var(--bgColor);
@@ -32,29 +38,33 @@ body{
 a{
     color: var(--lnewColor);
 }
+
 a:hover{
     color: var(--lhoverColor);
 }
+
+nav a:hover{
+    color: var(--lnewColor);
+}
+
+
 .colorBar{
     width: 3px;
     height: 100%;
     background: linear-gradient(to top, var(--colorA) 33.3%, var(--colorB) 33.4%, var(--colorB) 66.6%, var(--colorC) 66.7%);
 }
 
-.leftAnchor
-{
+.leftAnchor{
     position: fixed;
     left: 0;
 }
 
-.rightAnchor
-{
+.rightAnchor{
     position: fixed;
     right: 0;
 }
 
-.colorBar.leftAnchor
-{
+.colorBar.leftAnchor{
     transform: scale(-1);
 }
 
@@ -82,15 +92,15 @@ h1{
     animation-delay: 1.5s;
     animation-duration: .4s;
     animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-iteration-count: 2;
+    animation-fill-mode: both;
+    animation-direction: normal;
     transition-property: color;
     transition-timing-function: ease-out;
     transition-duration: .4s;
 }
 
 #titlecard h1:hover{
-    color: var(--colorC);
+    color: var(--colorB);
 }
 
 #main{
@@ -127,11 +137,6 @@ nav ul li{
     padding: 0 1em;
     width: 100px;
 }
-
-/*
-nav a{
-    color: var(--lnavListColor);
-}*/
 
 nav ul li:first-child .behind{
     background-color: var(--colorA);
@@ -175,6 +180,7 @@ nav ul li a {
 .top{
     background: var(--boxColor);
     display: flex;
+    border-bottom: 5px solid var(--titleColor);
 }
 
 .top header
@@ -267,6 +273,7 @@ nav ul li a {
 }
 
 .countTitle{
+    font-size: 1.1em;
     width: 0;
     overflow: visible;
     margin-bottom: .8em;
@@ -299,7 +306,7 @@ br{
 
 @keyframes toColor{
     from { color: var(--fontColor); }
-    to { color: var(--colorC);  }
+    to { color: var(--titleColor);  }
 }
 
 .right{
@@ -346,12 +353,18 @@ br{
     }
 }
 
-/*reduce some of the more decorative features
-@media only screen and (max-width: 1000px) {
-    #confetti{
-        display: none;
+/*reduce some of the more decorative features*/
+@media only screen and (max-width: 1200px) {
+    html{
+        margin: 0 auto;
     }
-}*/
+    .colorBar{
+        width: 0px;
+    }
+    /*#confetti{
+        display: none;
+    }*/
+}
 
 /*reduce size of nav boxes*/
 @media only screen and (max-width: 770px) {
