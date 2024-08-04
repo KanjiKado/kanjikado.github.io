@@ -5,6 +5,7 @@
     --colorC: #9B72A6;/*7D7746*/
     --outerBgColor:#FAFDFA;/*white*/
     --bgColor: #E9E9E9CC;
+    --bgDark: #080703;
     --boxColor: white; /*darkgray*/
     --lnewColor: var(--fontColor);
     --lnewColor2: #302E1B77;
@@ -361,6 +362,20 @@ br{
     .colorBar{
         width: 0px;
     }
+    
+#main:after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../img/bg_blur.jpeg");
+    background-repeat: no-repeat;
+    background-color: var(--bgDark);
+    position: fixed;
+    background-position: right top; 
+}
+
     /*#confetti{
         display: none;
     }*/
